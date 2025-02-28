@@ -137,3 +137,8 @@ def about():
 
 if __name__ == '__main__':
     app.run(debug=True)
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))  # يستخدم المنفذ الافتراضي أو الذي تحدده Render
+    app.run(host="0.0.0.0", port=port)
